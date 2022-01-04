@@ -1,4 +1,6 @@
+import { TextoService } from './../texto.service';
 import { Component, OnInit } from '@angular/core';
+import { Texto } from '../texto.model';
 
 @Component({
   selector: 'app-texto-read',
@@ -6,11 +8,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./texto-read.component.css']
 })
 export class TextoReadComponent implements OnInit {
-  
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  textos: Texto[] = [];
   
   displayedColumns: string[] = ['id', 'titulo', 'conteudo', 'acoes'];
+  
+  constructor(private service: TextoService) { }
+
+  ngOnInit(): void {
+    this.findAll();
+  }
+
+  findAll() {
+    this.service.findAll().subscribe(response => {
+      console.log(response)
+      this.textos = response;
+    })
+  }
 }
