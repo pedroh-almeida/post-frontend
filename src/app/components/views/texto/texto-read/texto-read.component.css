@@ -8,6 +8,10 @@
     margin-bottom: 3rem;
 }
 
+button {
+    margin-bottom: .9rem;
+}
+
 .title h1 {
     font-size: 2rem;
     color: #484848;
@@ -16,4 +20,9 @@
 
 .table {
     width: 100%;
+}
+
+.votos {
+    color: #484848;
+    margin-left: .6rem;
 }

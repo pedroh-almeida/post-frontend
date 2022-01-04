@@ -1,3 +1,4 @@
+import { TextoCreateComponent } from './components/views/texto/texto-create/texto-create.component';
 import { HomeComponent } from './components/views/home/home.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -11,6 +12,10 @@ const routes: Routes = [
   {
     path: 'textos',
     component: TextoReadComponent
+  },
+  {
+    path: 'textos/create',
+    component: TextoCreateComponent
   }
 ];
 

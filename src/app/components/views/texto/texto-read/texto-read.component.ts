@@ -1,6 +1,7 @@
 import { TextoService } from './../texto.service';
 import { Component, OnInit } from '@angular/core';
 import { Texto } from '../texto.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-texto-read',
@@ -10,9 +11,9 @@ import { Texto } from '../texto.model';
 export class TextoReadComponent implements OnInit {
   textos: Texto[] = [];
   
-  displayedColumns: string[] = ['id', 'titulo', 'conteudo', 'acoes'];
+  displayedColumns: string[] = ['id', 'titulo', 'conteudo','votos'];
   
-  constructor(private service: TextoService) { }
+  constructor(private service: TextoService, private router: Router) { }
 
   ngOnInit(): void {
     this.findAll();
@@ -23,5 +24,9 @@ export class TextoReadComponent implements OnInit {
       console.log(response)
       this.textos = response;
     })
+  }
+
+  navegarParaTextoCreate() {
+    this.router.navigate(["textos/create"]);
   }
 }

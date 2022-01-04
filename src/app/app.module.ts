@@ -11,6 +11,8 @@ import {MatListModule} from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
 import {MatTableModule} from '@angular/material/table';
+import {MatButtonModule} from '@angular/material/button';
+
 
 
 
@@ -19,6 +21,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import { NavComponent } from './components/template/nav/nav.component';
 import { HomeComponent } from './components/views/home/home.component';
 import { TextoReadComponent } from './components/views/texto/texto-read/texto-read.component';
+import { TextoCreateComponent } from './components/views/texto/texto-create/texto-create.component';
 
 
 @NgModule({
@@ -28,7 +31,8 @@ import { TextoReadComponent } from './components/views/texto/texto-read/texto-re
     FooterComponent,
     NavComponent,
     HomeComponent,
-    TextoReadComponent
+    TextoReadComponent,
+    TextoCreateComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +44,8 @@ import { TextoReadComponent } from './components/views/texto/texto-read/texto-re
     MatIconModule,
     MatCardModule,
     MatTableModule,
-    HttpClientModule
+    HttpClientModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
