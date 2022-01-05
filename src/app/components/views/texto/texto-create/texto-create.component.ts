@@ -31,4 +31,8 @@ export class TextoCreateComponent implements OnInit {
     })
   }
 
+  cancel(): void {
+    this.router.navigate(['textos']);
+  }
+
 }

@@ -21,7 +21,6 @@ export class TextoReadComponent implements OnInit {
 
   findAll() {
     this.service.findAll().subscribe(response => {
-      console.log(response)
       this.textos = response;
     })
   }
