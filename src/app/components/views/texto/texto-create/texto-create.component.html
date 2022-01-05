@@ -3,16 +3,16 @@
 
     <mat-form-field class="form">
         <mat-label>Título</mat-label>
-        <input matInput type="text" name="titulo" placeholder="Insira o título do texto">
+        <input matInput [(ngModel)]="texto.titulo" type="text" name="titulo" placeholder="Insira o título do texto">
     </mat-form-field>
 
     <mat-form-field class="form">
         <mat-label>Conteúdo</mat-label>
-        <input matInput type="text" name="conteudo" placeholder="Insira o conteúdo do texto">
+        <input matInput [(ngModel)]="texto.conteudo" type="text" name="conteudo" placeholder="Insira o conteúdo do texto">
     </mat-form-field>
 
     <div class="buttons">
-        <button class="mat-elevation-z8" mat-raised-button color="primary">Criar texto</button>
+        <button (click)="create()" class="mat-elevation-z8" mat-raised-button color="primary">Criar texto</button>
         <button class="mat-elevation-z8" mat-raised-button color="warn">Cancelar</button>
     </div>
 </form>

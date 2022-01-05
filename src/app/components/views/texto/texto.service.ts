@@ -1,6 +1,7 @@
 
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Texto } from './texto.model';
@@ -12,11 +13,25 @@ export class TextoService {
 
   baseUrl: String = environment.baseUrl;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private _snack: MatSnackBar) { }
 
   findAll():Observable<Texto[]> {
     const url = `${this.baseUrl}/textos`
 
     return this.http.get<Texto[]>(url)
+  }
+
+  craete(texto: Texto): Observable<Texto>{
+    const url = `${this.baseUrl}/textos`
+
+    return this.http.post<Texto>(url, texto);
+  }
+
+  menssagem(str: String): void {
+    this._snack.open(`${str}`, 'Ok', {
+      horizontalPosition: 'end',
+      verticalPosition: 'top',
+      duration: 3000
+    })
   }
 }
