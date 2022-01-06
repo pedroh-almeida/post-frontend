@@ -3,7 +3,7 @@
       <h1>UpVotes</h1>
     </div>
   
-    <button class="mat-elevation-z8" mat-raised-button color="primary">Novo Voto</button>
+    <button class="mat-elevation-z8" (click)="navegarParaCriarVoto()" mat-raised-button color="primary">Novo Voto</button>
   
     <div class="mat-elevation-z8 content-table">
       <table class="table" mat-table [dataSource]="votos">

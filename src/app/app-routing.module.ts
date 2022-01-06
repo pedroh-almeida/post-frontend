@@ -1,3 +1,4 @@
+import { VotoCreateComponent } from './components/views/voto/voto-create/voto-create.component';
 import { VotoReadTextoComponent } from './components/views/voto/voto-read-texto/voto-read-texto.component';
 import { TextoDeleteComponent } from './components/views/texto/texto-delete/texto-delete.component';
 import { TextoCreateComponent } from './components/views/texto/texto-create/texto-create.component';
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'textos/:id_texto/votos',
     component: VotoReadTextoComponent
+  },
+  {
+    path: 'textos/:id_texto/votos/create',
+    component: VotoCreateComponent
   }
 ];
 

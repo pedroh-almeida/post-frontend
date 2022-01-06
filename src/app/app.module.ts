@@ -12,7 +12,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
 import {MatTableModule} from '@angular/material/table';
 import {MatButtonModule} from '@angular/material/button';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
@@ -27,6 +27,7 @@ import { TextoReadComponent } from './components/views/texto/texto-read/texto-re
 import { TextoCreateComponent } from './components/views/texto/texto-create/texto-create.component';
 import { TextoDeleteComponent } from './components/views/texto/texto-delete/texto-delete.component';
 import { VotoReadTextoComponent } from './components/views/voto/voto-read-texto/voto-read-texto.component';
+import { VotoCreateComponent } from './components/views/voto/voto-create/voto-create.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { VotoReadTextoComponent } from './components/views/voto/voto-read-texto/
     TextoReadComponent,
     TextoCreateComponent,
     TextoDeleteComponent,
-    VotoReadTextoComponent
+    VotoReadTextoComponent,
+    VotoCreateComponent
   ],
   imports: [
     BrowserModule,
@@ -56,7 +58,8 @@ import { VotoReadTextoComponent } from './components/views/voto/voto-read-texto/
     FormsModule,
     MatInputModule,
     MatFormFieldModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

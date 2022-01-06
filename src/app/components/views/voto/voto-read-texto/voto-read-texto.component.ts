@@ -1,4 +1,4 @@
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { VotoService } from './../voto.service';
 import { Voto } from './../voto.model';
 import { Component, OnInit } from '@angular/core';
@@ -16,7 +16,7 @@ export class VotoReadTextoComponent implements OnInit {
 
   votos: Voto[] = []
 
-  constructor(private service: VotoService, private route: ActivatedRoute) { }
+  constructor(private service: VotoService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     this.id_texto = this.route.snapshot.paramMap.get('id_texto')!
@@ -26,7 +26,10 @@ export class VotoReadTextoComponent implements OnInit {
   findAllByTexto(): void{
     this.service.findAllByTexto(this.id_texto).subscribe((resposta) => {
       this.votos = resposta
-      console.log(this.votos)
     })
+  }
+
+  navegarParaCriarVoto(): void {
+    this.router.navigate([`textos/${this.id_texto}/votos/create`])
   }
 }

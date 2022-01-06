@@ -1,0 +1,19 @@
+<form action="">
+    <h1>Novo UpVote</h1>
+
+    <mat-form-field class="form">
+        <mat-label>Status</mat-label>
+        <input matInput [(ngModel)]="voto.status" [formControl]="status" required type="text" name="status" placeholder="Positivo ou negativo" maxlength="30">
+        <mat-error *ngIf="status.invalid">{{ getMessage() }}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="form">
+        <mat-label>Comentario</mat-label>
+        <input matInput [(ngModel)]="voto.comentario" type="text" name="comentario" placeholder="Insira um comentário">
+    </mat-form-field>
+
+    <div class="buttons">
+        <button (click)="create()" [disabled]="getMessage()" class="mat-elevation-z8" mat-raised-button color="primary">Criar</button>
+        <button (click)="cancel()" class="mat-elevation-z8" mat-raised-button color="warn">Cancelar</button>
+    </div>
+</form>
