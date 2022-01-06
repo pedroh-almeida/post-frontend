@@ -1,12 +1,12 @@
 <div class="content">
     <div class="title">
-      <h1>Votos</h1>
+      <h1>UpVotes</h1>
     </div>
   
     <button class="mat-elevation-z8" mat-raised-button color="primary">Novo Voto</button>
   
     <div class="mat-elevation-z8 content-table">
-      <table class="table" mat-table>
+      <table class="table" mat-table [dataSource]="votos">
         <!-- Id Column -->
         <ng-container matColumnDef="id">
           <th mat-header-cell *matHeaderCellDef>ID</th>

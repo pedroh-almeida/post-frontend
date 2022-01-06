@@ -24,7 +24,7 @@ const routes: Routes = [
     component: TextoDeleteComponent
   },
   {
-    path: 'textos/:id_voto/votos',
+    path: 'textos/:id_texto/votos',
     component: VotoReadTextoComponent
   }
 ];
