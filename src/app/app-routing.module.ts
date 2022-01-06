@@ -1,3 +1,4 @@
+import { TextoDeleteComponent } from './components/views/texto/texto-delete/texto-delete.component';
 import { TextoCreateComponent } from './components/views/texto/texto-create/texto-create.component';
 import { HomeComponent } from './components/views/home/home.component';
 import { NgModule } from '@angular/core';
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'textos/create',
     component: TextoCreateComponent
+  },
+  {
+    path: 'textos/delete/:id',
+    component: TextoDeleteComponent
   }
 ];
 

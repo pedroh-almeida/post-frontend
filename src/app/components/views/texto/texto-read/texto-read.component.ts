@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class TextoReadComponent implements OnInit {
   textos: Texto[] = [];
   
-  displayedColumns: string[] = ['id', 'titulo', 'conteudo','votos'];
+  displayedColumns: string[] = ['id', 'titulo', 'conteudo','votos', 'acoes'];
   
   constructor(private service: TextoService, private router: Router) { }
 

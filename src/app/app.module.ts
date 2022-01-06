@@ -25,6 +25,7 @@ import { NavComponent } from './components/template/nav/nav.component';
 import { HomeComponent } from './components/views/home/home.component';
 import { TextoReadComponent } from './components/views/texto/texto-read/texto-read.component';
 import { TextoCreateComponent } from './components/views/texto/texto-create/texto-create.component';
+import { TextoDeleteComponent } from './components/views/texto/texto-delete/texto-delete.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { TextoCreateComponent } from './components/views/texto/texto-create/text
     NavComponent,
     HomeComponent,
     TextoReadComponent,
-    TextoCreateComponent
+    TextoCreateComponent,
+    TextoDeleteComponent
   ],
   imports: [
     BrowserModule,
