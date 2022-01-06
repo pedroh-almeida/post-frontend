@@ -33,6 +33,12 @@ export class TextoService {
     return this.http.post<Texto>(url, texto);
   }
 
+  delete(id: String):Observable<void> {
+    const url = `${this.baseUrl}/textos/${id}`
+
+    return this.http.delete<void>(url)
+  }
+
   menssagem(str: String): void {
     this._snack.open(`${str}`, 'Ok', {
       horizontalPosition: 'end',
