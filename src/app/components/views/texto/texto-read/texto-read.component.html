@@ -29,7 +29,7 @@
       <ng-container matColumnDef="votos">
         <th mat-header-cell *matHeaderCellDef>Upvotes</th>
         <td mat-cell *matCellDef="let row">
-          <a class="votos"  href="#">
+          <a class="votos" routerLink="{{ row.id }}/votos">
             <i class="material-icons">subject</i>
           </a>
         </td>
@@ -38,7 +38,7 @@
       <ng-container matColumnDef="acoes">
         <th mat-header-cell *matHeaderCellDef>Ações</th>
         <td mat-cell *matCellDef="let row"> 
-          <a routerLink="delete/{{ row.id }}" href="#" class="delete">
+          <a routerLink="delete/{{ row.id }}" class="delete">
             <i class="material-icons">delete</i>
           </a>
         </td>

@@ -26,6 +26,7 @@ import { HomeComponent } from './components/views/home/home.component';
 import { TextoReadComponent } from './components/views/texto/texto-read/texto-read.component';
 import { TextoCreateComponent } from './components/views/texto/texto-create/texto-create.component';
 import { TextoDeleteComponent } from './components/views/texto/texto-delete/texto-delete.component';
+import { VotoReadTextoComponent } from './components/views/voto/voto-read-texto/voto-read-texto.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { TextoDeleteComponent } from './components/views/texto/texto-delete/text
     HomeComponent,
     TextoReadComponent,
     TextoCreateComponent,
-    TextoDeleteComponent
+    TextoDeleteComponent,
+    VotoReadTextoComponent
   ],
   imports: [
     BrowserModule,
