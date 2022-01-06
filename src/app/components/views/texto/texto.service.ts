@@ -21,6 +21,12 @@ export class TextoService {
     return this.http.get<Texto[]>(url)
   }
 
+  findById(id: String): Observable<Texto> {
+    const url = `${this.baseUrl}/textos/${id}`
+
+    return this.http.get<Texto>(url)
+  }
+
   craete(texto: Texto): Observable<Texto>{
     const url = `${this.baseUrl}/textos`
 
